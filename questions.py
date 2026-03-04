@@ -14,3 +14,6 @@ class MultipleChoiceQuestion(Question):
         self.question = question
         self.correct_answer = correct_answer
         self.options = options
+
+class TrueFalseQuestion(Question):
+    print("test")
