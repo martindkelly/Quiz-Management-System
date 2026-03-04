@@ -8,3 +8,9 @@ class Question:
             return True
         else:
             return False
+        
+class MultipleChoiceQuestion(Question):
+    def __init__(self, question, options, correct_answer):
+        self.question = question
+        self.correct_answer = correct_answer
+        self.options = options
