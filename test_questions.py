@@ -9,4 +9,14 @@ def test_multiple_choice_correct_answer_returns_true():
 def test_true_false_correct_answer_returns_true():
     q = TrueFalseQuestion(question="Are there 7 days in a week?",
                           correct_answer=True)
-    assert q.check_answer("True") == True
+    assert q.check_answer(True) == True
+
+def test_text_input_correct_answer_returns_true():
+    q =  TextInputQuestion(question="What's the last month of the year?",
+                           correct_answer="December")
+    assert q.check_answer("December") == True
+
+def test_text_input_case_insensitivity():
+    q =  TextInputQuestion(question="What's the last month of the year?",
+                           correct_answer="December")
+    assert q.check_answer("december") == True
