@@ -16,4 +16,14 @@ class MultipleChoiceQuestion(Question):
         self.options = options
 
 class TrueFalseQuestion(Question):
-    print("test")
+    def __init__(self, question, correct_answer):
+        self.question = question
+        self.correct_answer= correct_answer
+
+class TextInputQuestion(Question):
+    def __init__(self, question, correct_answer):
+        self.question = question
+        self.correct_answer = correct_answer.lower()
+    
+    def check_answer(self, user_answer):
+        return user_answer.lower() == self.correct_answer
