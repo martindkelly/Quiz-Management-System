@@ -37,3 +37,12 @@ def test_factory_creating_true_false_question():
         correct_answer=True
     )
     assert isinstance(q, TrueFalseQuestion)
+
+def test_factory_creating_text_input_question():
+    q = QuestionFactory.create(
+        question_type="text_input",
+        question="What's the last month of the year?",
+        correct_answer="December"
+    )
+
+    assert isinstance(q, TextInputQuestion)
