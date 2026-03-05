@@ -29,3 +29,11 @@ def test_factory_creating_multiple_choice_question():
         options=["yellow", "red", "green", "blue"]
     )
     assert isinstance(q, MultipleChoiceQuestion)
+
+def test_factory_creating_true_false_question():
+    q = QuestionFactory.create(
+        question_type="true_false",
+        question="Are there 7 days in a week?",
+        correct_answer=True
+    )
+    assert isinstance(q, TrueFalseQuestion)
