@@ -1,4 +1,4 @@
-from questions import MultipleChoiceQuestion, TrueFalseQuestion
+from questions import MultipleChoiceQuestion, TrueFalseQuestion, TextInputQuestion
 
 def test_multiple_choice_correct_answer_returns_true():
     q = MultipleChoiceQuestion(question="What colour is the sky",
@@ -20,3 +20,12 @@ def test_text_input_case_insensitivity():
     q =  TextInputQuestion(question="What's the last month of the year?",
                            correct_answer="December")
     assert q.check_answer("december") == True
+
+def test_factory_creating_multiple_choice_question():
+    q = QuestionFactory.create(
+        question_type="multiple_choice",
+        question="What colour is the sky?",
+        correct_answer="blue",
+        options=["yellow", "red", "green", "blue"]
+    )
+    assert isinstance(q, MultipleChoiceQuestion)
