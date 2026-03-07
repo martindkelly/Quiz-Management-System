@@ -18,4 +18,9 @@ class Scores:
     def get_total(self):
         return self.total
     
+    def get_percentage(self):
+        if self.total == 0:
+            return 0.0
+        else:
+            return round((self.correct / self.total) * 100, 1)
     
