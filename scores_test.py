@@ -69,3 +69,36 @@ def test_realistic_quiz():
     assert s.get_correct() == 6
     assert s.get_total() == 9
     assert s.get_percentage() == 66.7
+
+def test_multiple_users():
+    s1 = Scores()
+    s2 = Scores()
+
+    s1.inc_score()  # User 1: 1 correct
+    s2.inc_wrong()  # User 2: 1 wrong
+    s1.inc_wrong()  # User 1: 1 wrong
+    s2.inc_wrong()  # User 2: 1 wrong
+    s1.inc_score()  # User 1: 2 correct
+    s2.inc_wrong()  # User 2: 2 wrong
+
+    assert s1.get_correct() == 2
+    assert s1.get_total() == 3
+    assert s1.get_percentage() == 66.7
+
+    assert s2.get_correct() == 0
+    assert s2.get_total() == 3
+    assert s2.get_percentage() == 0.0
+
+def run_tests():
+    test_initial_score()
+    test_inc_score_increases_correct()
+    test_wrong_answer_increases_total()
+    test_percentage_calculation()
+    test_percentage_div_by_zero()
+    test_percentage_all_correct()
+    test_percentage_all_wrong()
+    test_really_long_quiz()
+    test_realistic_quiz()
+    test_multiple_users()
+
+run_tests()
