@@ -27,3 +27,17 @@ class TextInputQuestion(Question):
     
     def check_answer(self, user_answer):
         return user_answer.lower() == self.correct_answer
+
+
+class QuestionFactory:
+    @staticmethod
+    def create(question_type, question, correct_answer, options=None):
+        if question_type == "multiple_choice":
+            return MultipleChoiceQuestion(question, options, correct_answer)
+        elif question_type == "true_false":
+            return TrueFalseQuestion(question, correct_answer)
+        elif question_type == "text_input":
+            return TextInputQuestion(question, correct_answer)
+        else:
+            print("Unknown question type:", question_type)
+            return None
