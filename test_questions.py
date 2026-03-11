@@ -1,4 +1,4 @@
-from questions import MultipleChoiceQuestion, TrueFalseQuestion, TextInputQuestion
+from questions import MultipleChoiceQuestion, QuestionFactory, TrueFalseQuestion, TextInputQuestion
 
 def test_multiple_choice_correct_answer_returns_true():
     q = MultipleChoiceQuestion(question="What colour is the sky",
