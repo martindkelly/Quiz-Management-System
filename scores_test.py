@@ -89,16 +89,3 @@ def test_multiple_users():
     assert s2.get_total() == 3
     assert s2.get_percentage() == 0.0
 
-def run_tests():
-    test_initial_score()
-    test_inc_score_increases_correct()
-    test_wrong_answer_increases_total()
-    test_percentage_calculation()
-    test_percentage_div_by_zero()
-    test_percentage_all_correct()
-    test_percentage_all_wrong()
-    test_really_long_quiz()
-    test_realistic_quiz()
-    test_multiple_users()
-
-run_tests()
