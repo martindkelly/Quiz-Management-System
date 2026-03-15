@@ -11,19 +11,16 @@ class Question:
         
 class MultipleChoiceQuestion(Question):
     def __init__(self, question, options, correct_answer):
-        self.question = question
-        self.correct_answer = correct_answer
+        super().__init__(question, correct_answer)
         self.options = options
 
 class TrueFalseQuestion(Question):
     def __init__(self, question, correct_answer):
-        self.question = question
-        self.correct_answer= correct_answer
+        super().__init__(question, correct_answer)
 
 class TextInputQuestion(Question):
     def __init__(self, question, correct_answer):
-        self.question = question
-        self.correct_answer = correct_answer.lower()
+        super().__init__(question, correct_answer.lower())
     
     def check_answer(self, user_answer):
         return user_answer.lower() == self.correct_answer
