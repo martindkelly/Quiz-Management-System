@@ -1,0 +1,71 @@
+{
+    "title": "Maths",
+    "questions": [
+        {
+            "type": "multiple_choice",
+            "question": "What's 7x8?",
+            "correct_answer": "56",
+            "options": ["54","55","56","58"]
+        },
+
+        {
+            "type": "true_false",
+            "question": "10x10=100?",
+            "correct_answer": true
+        },
+
+          {
+            "type": "multiple_choice",
+            "question": "What's 100/2?",
+            "correct_answer": "50",
+            "options": ["25","50","75","200"]
+        },
+
+          {
+            "type": "text_input",
+            "question": "What's 9x9 (digits not text)?",
+            "correct_answer": "81"
+        },
+
+          {
+            "type": "true_false",
+            "question": "400x2=900?",
+            "correct_answer": false
+        },
+
+          {
+            "type": "multiple_choice",
+            "question": "What's the square root of 81?",
+            "correct_answer": "9",
+            "options": ["4","9","40.5","8.1"]
+        },
+
+          {
+            "type": "multiple_choice",
+            "question": "What's 2x2?",
+            "correct_answer": "4",
+            "options": ["2","4","5","6"]
+        },
+
+          {
+            "type": "text_input",
+            "question": "What's higher 20 or 40 (digits not text)?",
+            "correct_answer": "40"
+        },
+
+          {
+            "type": "true_false",
+            "question": "20 is less than 10",
+            "correct_answer": false
+        },
+
+          {
+            "type": "multiple_choice",
+            "question": "What's 4x5",
+            "correct_answer": "20",
+            "options": ["20","21","25","22"]
+        }
+
+
+    ]
+}

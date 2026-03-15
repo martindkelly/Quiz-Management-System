@@ -1,0 +1,19 @@
+{
+    "title": "General Knowledge",
+    "questions": [
+        {
+            "type": "multiple_choice",
+            "question": "Who is the Prime Minister? (type name)",
+            "correct_answer": "Keir Starmer",
+            "options": ["David Cameron","Liz Truss","Keir Starmer","Donald Trump"]
+        },
+
+        {
+            "type": "true_false",
+            "question": "Is Edinburgh the capital of Scotland?",
+            "correct_answer": true
+        }
+
+
+    ]
+}
