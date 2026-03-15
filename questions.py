@@ -36,5 +36,4 @@ class QuestionFactory:
         elif question_type == "text_input":
             return TextInputQuestion(question, correct_answer)
         else:
-            print("Unknown question type:", question_type)
-            return None
+            raise ValueError("Unknown question type: " + question_type)
